@@ -17,6 +17,5 @@ export class DataService {
 
   update(name: string,data: Data){
     classes[classes.indexOf(data)].students.push({name});
-    console.log(classes);
   }
 }
