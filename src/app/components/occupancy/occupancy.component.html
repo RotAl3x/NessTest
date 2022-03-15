@@ -1,0 +1,3 @@
+ <div *ngIf="per<25" class="bar green" [ngStyle]="{'width.%': per}"></div>
+ <div *ngIf="per>=25&&per<75" class="bar yellow" [ngStyle]="{'width.%': per}"></div>
+ <div *ngIf="per>=75" class="bar red" [ngStyle]="{'width.%': per}"></div>

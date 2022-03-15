@@ -1,0 +1,17 @@
+<div class="d-flex">
+  <div class="classes">
+    <a>name</a>
+    <a>teacher</a>
+    <a>percentage</a>
+    <a style="height: 12px"></a>
+  </div>
+<div *ngFor="let cla of classes" class="classes">
+  <a>{{cla.name}}</a>
+  <a>{{cla.teacher}}</a>
+  <a>{{percentage(cla)+'%'}}</a>
+  <app-occupancy [per]="percentage(cla)"></app-occupancy>
+  <button *ngIf="isFull(cla)" (click)="openDialog(cla)">Add student</button>
+  <button (click)="deleteClass(cla)">Delete class</button>
+</div>
+</div>
+<app-search  (searchName)="searchName=$event" (searchTerm)="filterClasses($event)" ></app-search>
